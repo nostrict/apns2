@@ -4,7 +4,7 @@ NOTE: This is an experimental branch for the purpose of testing the new token ba
 
 APNS/2 is a go package designed for simple, flexible and fast Apple Push Notifications on iOS, OSX and Safari using the new HTTP/2 Push provider API.
 
-[![Build Status](https://travis-ci.org/sideshow/apns2.svg?branch=master)](https://travis-ci.org/sideshow/apns2)  [![Coverage Status](https://coveralls.io/repos/sideshow/apns2/badge.svg?branch=master&service=github)](https://coveralls.io/github/sideshow/apns2?branch=master)  [![GoDoc](https://godoc.org/github.com/sideshow/apns2?status.svg)](https://godoc.org/github.com/sideshow/apns2)
+[![Build Status](https://travis-ci.org/sideshow/apns2.svg?branch=master)](https://travis-ci.org/sideshow/apns2)  [![Coverage Status](https://coveralls.io/repos/sideshow/apns2/badge.svg?branch=master&service=github)](https://coveralls.io/github/sideshow/apns2?branch=master)  [![GoDoc](https://godoc.org/github.com/nostrict/apns2?status.svg)](https://godoc.org/github.com/nostrict/apns2)
 
 ## Features
 
@@ -29,7 +29,7 @@ APNS/2 is a go package designed for simple, flexible and fast Apple Push Notific
 - Install apns2:
 
   ```sh
-  go get -u github.com/sideshow/apns2
+  go get -u github.com/nostrict/apns2
   ```
 
 ## Example
@@ -38,8 +38,8 @@ APNS/2 is a go package designed for simple, flexible and fast Apple Push Notific
 package main
 
 import (
-  apns "github.com/sideshow/apns2"
-  "github.com/sideshow/apns2/certificate"
+  apns "github.com/nostrict/apns2"
+  "github.com/nostrict/apns2/certificate"
   "log"
 )
 
@@ -100,7 +100,7 @@ notification.Payload = payload
 client.Push(notification)
 ```
 
-Refer to the [payload](https://godoc.org/github.com/sideshow/apns2/payload) docs for more info.
+Refer to the [payload](https://godoc.org/github.com/nostrict/apns2/payload) docs for more info.
 
 ## Response, Error handling
 
@@ -124,7 +124,7 @@ if res.Sent() {
 
 ## Command line tool
 
-APNS/2 has a command line tool that can be installed with `go get github.com/sideshow/apns2/apns2`. Usage:
+APNS/2 has a command line tool that can be installed with `go get github.com/nostrict/apns2/apns2`. Usage:
 
 ```
 apns2 --help
