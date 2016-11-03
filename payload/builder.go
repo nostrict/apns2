@@ -110,13 +110,24 @@ func (p *Payload) MutableContent() *Payload {
 
 // Custom payload
 
-// Custom sets a custom key and value on the payload.
+// AddCustom sets a custom key and value on the payload.
 // This will add custom key/value data to the notification payload at root level.
 //
 //	{"aps":{}, key:value}
-func (p *Payload) Custom(key string, val interface{}) *Payload {
+func (p *Payload) AddCustom(key string, val interface{}) *Payload {
 	p.content[key] = val
 	return p
+}
+
+// DeleteCustom remove a custom key and value on the payload.
+func (p *Payload) DeleteCustom(key string) *Payload {
+	delete(p.content, "key")
+	return p
+}
+
+// Custom sets a custom key and value on the payload via AddCustom method (backward compatibility)
+func (p *Payload) Custom(key string, val interface{}) *Payload {
+	return p.AddCustom(key, val)
 }
 
 // Alert dictionary
